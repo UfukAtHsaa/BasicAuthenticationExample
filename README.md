@@ -9,6 +9,8 @@ A simple Application with a Frontend and Backend secured by Basic Authentication
 3. User Can login
 4. User Can logout
 
+Username And Password are stored in `SpringBasicAuthBackend/src/main/resources/data.sql`
+
 
 ## Backend
 ### Prerequisite
