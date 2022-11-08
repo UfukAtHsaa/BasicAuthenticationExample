@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200/")
 @RequestMapping("/public/v1/lecture")
 public class PublicLectureController {
 

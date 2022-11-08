@@ -10,7 +10,6 @@ import java.util.Collection;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200/")
 @RequestMapping("/private/v1/lecture")
 public class LectureController {
     final private LectureService lectureService;

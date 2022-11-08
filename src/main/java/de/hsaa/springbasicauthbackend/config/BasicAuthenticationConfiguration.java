@@ -35,7 +35,7 @@ public class BasicAuthenticationConfiguration {
         httpSecurity.headers()
                 .frameOptions()
                 .sameOrigin();
-
+        httpSecurity.cors();
         return httpSecurity.build();
     }
 
