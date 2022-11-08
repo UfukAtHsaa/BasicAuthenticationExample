@@ -1,0 +1,3 @@
+import { Lecture } from './lecture';
+
+

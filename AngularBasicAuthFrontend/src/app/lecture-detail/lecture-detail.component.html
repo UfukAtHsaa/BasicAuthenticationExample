@@ -1,0 +1,15 @@
+<div *ngIf="lecture">
+
+  <h2>{{lecture.lectureName | uppercase}} Details</h2>
+  <div><span>id: </span>{{lecture.id}}</div>
+  <div><span>Lecture Name: </span>{{lecture.lectureName}}</div>
+  <ul>
+    <li *ngFor="let student of lecture.students">
+        {{student}}
+    </li>
+  </ul>
+  <button type="button" (click)="goBack()">go back</button>
+</div>
+<div *ngIf="lecture === undefined || lecture === null">
+  <span>No authorization</span>
+</div>
