@@ -31,7 +31,7 @@ public class BasicAuthenticationConfiguration {
                 .httpBasic(withDefaults());
 
         httpSecurity.csrf()
-                .ignoringAntMatchers("/h2-console/**");
+                .disable();
         httpSecurity.headers()
                 .frameOptions()
                 .sameOrigin();
