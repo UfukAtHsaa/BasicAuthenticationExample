@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -21,23 +23,15 @@ public class BasicAuthenticationConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests()
-                .antMatchers("/h2-console/**")
-                .permitAll()
-                .antMatchers("/public/**")
-                .permitAll()
-                .antMatchers("/private/**")
-                .hasAnyRole("USER", "ADMIN")
+                .requestMatchers("/h2-console/**").permitAll()
+                .requestMatchers("/public/**").permitAll()
+                .requestMatchers("/private/**").hasAnyRole("USER", "ADMIN")
                 .and()
                 .httpBasic(withDefaults());
 
-        httpSecurity.csrf()
-                .disable();
-        httpSecurity.headers()
-                .frameOptions()
-                .sameOrigin();
-        httpSecurity.cors();
+        httpSecurity.csrf(AbstractHttpConfigurer::disable);
+        httpSecurity.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
+        httpSecurity.cors(withDefaults());
         return httpSecurity.build();
     }
-
-
 }

@@ -2,6 +2,7 @@ package de.hsaa.springbasicauthbackend.controller;
 
 import de.hsaa.springbasicauthbackend.model.Lecture;
 import de.hsaa.springbasicauthbackend.service.LectureService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/private/v1/lecture")
+@Slf4j
 public class LectureController {
     final private LectureService lectureService;
 

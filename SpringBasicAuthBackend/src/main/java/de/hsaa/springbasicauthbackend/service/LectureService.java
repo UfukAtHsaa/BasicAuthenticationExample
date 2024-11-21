@@ -15,39 +15,11 @@ public class LectureService {
                 .id("1234")
                 .lectureName("Projektseminar Programmierung")
                 .students(List.of(
-                        "Nico Bay",
-                        "Philipp Beisswanger",
-                        "Mahir Berkcan",
-                        "Marcus Bilo",
-                        "Tim Dauser",
-                        "Niklas Dimoski",
-                        "Tobias Gentner",
-                        "Alexander Ginkel",
-                        "Tim Grunwald",
-                        "Sara Haileselassie",
-                        "Jannic Hofmann",
-                        "Hendrik Illenberger",
-                        "Robin Kirrmann",
-                        "Fabian Klaerer",
-                        "Moritz Knoellv",
-                        "Ferhat Nazlioglu",
-                        "Timon Neitzel",
-                        "Kim Neuhaeusler",
-                        "Sinem Oezkan",
-                        "Muhammed Oeztuerk",
-                        "Isabel Ostermann",
-                        "Rene Priel",
-                        "Jonas Roessel",
-                        "Christoph Schuerger",
-                        "Jacob Schulze",
-                        "Marius Traub",
-                        "Furkan Vural",
-                        "Kai Wannenwetsch",
-                        "Jonas Werner",
-                        "Robin Wiedemann",
-                        "Nico Wittek",
-                        "Selim Yilmaz",
-                        "Toni Zubac"
+                        "Student 1",
+                        "Student 2",
+                        "Student 3",
+                        "Student 4",
+                        "Student 5"
                 ))
                 .build();
         Lecture lecture2 = Lecture
@@ -55,10 +27,9 @@ public class LectureService {
                 .id("2345")
                 .lectureName("Datenstruktur")
                 .students(List.of(
-                        "Nico Bay",
-                        "Philipp Beisswanger",
-                        "Mahir Berkcan",
-                        "Marcus Bilo"
+                        "Student 1",
+                        "Student 2",
+                        "Student 3"
                 ))
                 .build();
         Lecture lecture3 = Lecture
@@ -66,10 +37,8 @@ public class LectureService {
                 .id("345")
                 .lectureName("Java 4 Beginners")
                 .students(List.of(
-                        "Robin Wiedemann",
-                        "Nico Wittek",
-                        "Selim Yilmaz",
-                        "Toni Zubac"
+                        "Student 1",
+                        "Student 2"
                 ))
                 .build();
         lectureMap.put(lecture1.getId(), lecture1);
