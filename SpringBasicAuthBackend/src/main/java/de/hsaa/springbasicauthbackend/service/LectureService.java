@@ -57,4 +57,13 @@ public class LectureService {
         else
             return Optional.empty();
     }
+
+    public Optional<Lecture> update(Lecture lecture) {
+        if (lectureMap.containsKey(lecture.getId())) {
+            lectureMap.put(lecture.getId(), lecture);
+            return Optional.of(lecture);
+        } else {
+            return Optional.empty();
+        }
+    }
 }
